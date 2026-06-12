@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade with IC Markets</title>
+<link rel="stylesheet" href="broker.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="bars" aria-hidden="true"><span></span><span></span><span></span></span>
+    <span><span class="ic">IC</span> <span class="markets">Markets</span></span>
+  </div>
+
+  <nav class="desktop-nav" aria-label="Primary">
+    <a href="#">Trading</a>
+    <a href="#">Platforms</a>
+    <a href="#">Accounts</a>
+    <a href="#">Education</a>
+     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emilywilsonwills@gmail.com&su=New%20Account%20Inquiry&body=Hi%2C%20I%27d%20like%20to%20open%20a%20trading%20account." target="_blank" class="nav-cta">OPEN ACCOUNT NOW</a>
+  </nav>
+  
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+
+<nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+  <a href="#">Trading</a>
+  <a href="#">Platforms</a>
+  <a href="#">Accounts</a>
+  <a href="#">Education</a>
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emilywilsonwills@gmail.com&su=New%20Account%20Inquiry&body=Hi%2C%20I%27d%20like%20to%20open%20a%20trading%20account." target="_blank" class="nav-cta">OPEN ACCOUNT NOW</a>
+</nav>
+
+<section class="hero">
+
+  <div class="hero-art" aria-hidden="true">
+    <div class="bars-graphic">
+      <div class="gold-bar b1"></div>
+      <div class="gold-bar b2"></div>
+      <div class="gold-bar b3"></div>
+      <div class="gold-bar b4"></div>
+      <div class="gold-bar b5"></div>
+      <div class="gold-bar b6"></div>
+      <div class="gold-bar b7"></div>
+      <div class="gold-bar b8"></div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <h1>
+      <span class="line1">Trade with</span><br>
+      <span class="line2"><span class="ic">IC</span> Markets</span>
+    </h1>
+
+    <div class="features">
+      <div class="feature">
+        <div class="feature-icon">0.0</div>
+        <div class="feature-text">Trade starting from<br><strong>0.0 spread</strong></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="13" width="4" height="8" fill="currentColor"/>
+            <rect x="10" y="9" width="4" height="12" fill="currentColor"/>
+            <rect x="17" y="4" width="4" height="17" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="feature-text">Leverage up to<br><strong>1000:1</strong></div>
+      </div>
+      <div class="feature">
+        <div class="feature-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="13 2 3 14 11 14 9 22 21 10 13 10 13 2"/>
+          </svg>
+        </div>
+        <div class="feature-text">Ultra fast servers</div>
+      </div>
+    </div>
+
+    <div class="bonus">
+      <div class="pct">100%</div>
+      <div class="word">BONUS</div>
+      <div class="sub">on your first deposit</div>
+      <div class="terms">Terms and conditions apply</div>
+    </div>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emilywilsonwills@gmail.com&su=New%20Account%20Inquiry&body=Hi%2C%20I%27d%20like%20to%20open%20a%20trading%20account." target="_blank" class="cta-btn">OPEN ACCOUNT NOW</a>
+    
+  </div>
+
+  <div class="risk-note">
+    <span class="highlight">Trading involves risk.</span><br>
+    Trading derivatives involves high risk to your capital.
+  </div>
+
+</section>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('active');
+    hamburger.setAttribute('aria-expanded', isOpen);
+  });
+
+  const headerEl = document.querySelector('header');
+
+function setHeaderHeight(){
+  document.documentElement.style.setProperty('--header-height', headerEl.offsetHeight + 'px');
+}
+setHeaderHeight();
+window.addEventListener('resize', setHeaderHeight);
+</script>
+
+</body>
+</html>
