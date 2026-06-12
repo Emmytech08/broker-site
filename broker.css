@@ -444,6 +444,111 @@
   font-size:0.82rem;
 }
 
+/* ===== MARKET SIGNALS ===== */
+.signals{
+  padding:60px 5vw 20px;
+  position:relative;
+  z-index:5;
+}
+.signals-header{
+  text-align:center;
+  max-width:640px;
+  margin:0 auto 40px;
+}
+.signals-header h2{
+  font-size:clamp(1.8rem, 4vw, 2.6rem);
+  font-weight:900;
+  color:var(--white);
+}
+.signals-header h2 span{
+  color:var(--green);
+}
+.signals-header p{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:1rem;
+}
+
+.signals-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:18px;
+  max-width:1200px;
+  margin:0 auto;
+}
+
+.signal-card{
+  background:rgba(255,255,255,0.03);
+  border:1px solid rgba(57,230,42,0.15);
+  border-radius:12px;
+  padding:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  transition:border-color 0.2s ease, transform 0.2s ease;
+}
+.signal-card:hover{
+  border-color:rgba(57,230,42,0.4);
+  transform:translateY(-4px);
+}
+
+.signal-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.signal-pair{
+  font-weight:800;
+  font-size:1.05rem;
+  color:var(--white);
+}
+.signal-badge{
+  font-size:0.72rem;
+  font-weight:800;
+  letter-spacing:0.5px;
+  padding:4px 10px;
+  border-radius:20px;
+}
+.signal-badge.buy{
+  background:rgba(57,230,42,0.15);
+  color:var(--green);
+}
+.signal-badge.sell{
+  background:rgba(255,90,90,0.15);
+  color:#ff6b6b;
+}
+
+.signal-price{
+  font-size:1.4rem;
+  font-weight:900;
+  color:var(--white);
+}
+
+.signal-change{
+  font-size:0.85rem;
+  font-weight:700;
+}
+.signal-change.up{color:var(--green);}
+.signal-change.down{color:#ff6b6b;}
+
+.signals-disclaimer{
+  text-align:center;
+  margin-top:28px;
+  font-size:0.78rem;
+  color:var(--muted);
+  max-width:640px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+@media (max-width:980px){
+  .signals-grid{grid-template-columns:repeat(2, 1fr);}
+}
+@media (max-width:480px){
+  .signals-grid{grid-template-columns:1fr;}
+  .signals{padding:48px 6vw 16px;}
+}
+
 @media (max-width:980px){
   .testimonials-grid{grid-template-columns:repeat(2, 1fr);}
 }
