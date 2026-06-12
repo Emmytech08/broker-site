@@ -15,13 +15,12 @@
   </div>
 
   <nav class="desktop-nav" aria-label="Primary">
-    <!-- <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emilywilsonwills@gmail.com&su=New%20Account%20Inquiry&body=Hi%2C%20I%27d%20like%20to%20open%20a%20trading%20account." target="_blank">Trade</a>
+    <!-- <a href="#">Trading</a>
     <a href="#">Platforms</a>
     <a href="#">Accounts</a>
     <a href="#">Education</a> -->
-     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emilywilsonwills@gmail.com&su=New%20Account%20Inquiry&body=Hi%2C%20I%27d%20like%20to%20open%20a%20trading%20account." target="_blank" class="nav-cta">OPEN ACCOUNT NOW</a>
+    <a href="mailto:emilywilsonwill@gmail.com?subject=New Account Inquiry&body=Hi, I'd like to open a trading account." class="nav-cta">OPEN ACCOUNT NOW</a>
   </nav>
-  
 
   <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
     <span></span>
@@ -35,7 +34,7 @@
   <a href="#">Platforms</a>
   <a href="#">Accounts</a>
   <a href="#">Education</a> -->
-  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emilywilsonwills@gmail.com&su=New%20Account%20Inquiry&body=Hi%2C%20I%27d%20like%20to%20open%20a%20trading%20account." target="_blank" class="nav-cta">OPEN ACCOUNT NOW</a>
+  <a href="mailto:emilywilsonwills@gmail.com?subject=New Account Inquiry&body=Hi, I'd like to open a trading account." class="nav-cta">OPEN ACCOUNT NOW</a>
 </nav>
 
 <section class="hero">
@@ -90,8 +89,8 @@
       <div class="sub">on your first deposit</div>
       <div class="terms">Terms and conditions apply</div>
     </div>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=emilywilsonwills@gmail.com&su=New%20Account%20Inquiry&body=Hi%2C%20I%27d%20like%20to%20open%20a%20trading%20account." target="_blank" class="cta-btn">OPEN ACCOUNT NOW</a>
-    
+
+    <a href="#" class="cta-btn">OPEN ACCOUNT NOW</a>
   </div>
 
   <div class="risk-note">
@@ -203,20 +202,19 @@
 <script>
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobile-nav');
+  const headerEl = document.querySelector('header');
+
+  function setHeaderHeight(){
+    document.documentElement.style.setProperty('--header-height', headerEl.offsetHeight + 'px');
+  }
+  setHeaderHeight();
+  window.addEventListener('resize', setHeaderHeight);
 
   hamburger.addEventListener('click', () => {
     const isOpen = mobileNav.classList.toggle('open');
     hamburger.classList.toggle('active');
     hamburger.setAttribute('aria-expanded', isOpen);
   });
-
-  const headerEl = document.querySelector('header');
-
-function setHeaderHeight(){
-  document.documentElement.style.setProperty('--header-height', headerEl.offsetHeight + 'px');
-}
-setHeaderHeight();
-window.addEventListener('resize', setHeaderHeight);
 </script>
 
 </body>
